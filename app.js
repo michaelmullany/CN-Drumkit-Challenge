@@ -1,18 +1,28 @@
-/* Get Drum Audio */
-const boomAudio = document.getElementById("boomAudio");
-const clapAudio = document.getElementById("clapAudio");
-const hihatAudio = document.getElementById("hihatAudio");
-const kickAudio = document.getElementById("kickAudio");
-const openHatAudio = document.getElementById("openHatAudio");
-const rideAudio = document.getElementById("rideAudio");
-const snareAudio = document.getElementById("snareAudio");
-const tinkAudio = document.getElementById("tinkAudio");
-const tomAudio = document.getElementById("tomAudio");
+const availableKeys = document.getElementsByClassName("drumKey");
 
+/* Functionality for pressing a key */
 document.addEventListener("keydown", (event) => {
-    playBoom();
+    pressedKey = event.key.toUpperCase();
+    selectedElement = selectElementFromKeyPress(pressedKey);
+    
+    if (selectedElement != undefined)
+    {
+        let drum = selectedElement.parentElement;
+        playSound(drum);
+    }
 });
 
-const playBoom = () => {
-    boomAudio.play();
+/* Identify the HTML element linked to the key that was pressed */
+const selectElementFromKeyPress = (pressedKey) => {
+    for (let i = 0; i < availableKeys.length; i++) {
+        if (availableKeys[i].innerHTML == pressedKey) {
+            return availableKeys[i];
+        }
+    }
+}
+
+/* Given a "drum", find a child that is an audio element and play it */
+const playSound = drum => {
+    let sound = drum.getElementsByTagName("audio")[0];
+    sound.play();
 }
