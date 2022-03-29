@@ -38,10 +38,9 @@ const selectElementFromKeyPress = (pressedKey) => {
 
 /* Given a "drum", find a child audio element and play it */
 const playSound = drum => {
-    flashDrum(drum, "green", 500);
+    flashDrum(drum, "#778DA9", 500);
     let sound = drum.getElementsByTagName("audio")[0];
     sound.play();
-    setTimeout()
 }
 
 function flashDrum(drum, color, flashLength) {

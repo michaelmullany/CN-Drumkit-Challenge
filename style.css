@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #E0E1DD;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    margin: 24px 0;
+    color: #0D1B2A;
+}
+
+p {
+    color: #E0E1DD;
+}
+
+#drumkit {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.drum {
+    border: #0D1B2A;
+    background-color: #415A77;
+    width: 10%;
+    min-width: 60px;
+    margin-bottom: 12px;
+    border-radius: 10%;
+    overflow: hidden;
+}
+
+.drumKey {
+    background-color: #1B263B;
+    padding: 6px 0px;
+}
+
+.drumName {
+    padding: 12px 0px;
+}
