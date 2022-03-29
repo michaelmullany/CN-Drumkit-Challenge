@@ -10,9 +10,11 @@ body {
     text-align: center;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    height: 100vh;
 }
 
-h1 {
+h1, h2 {
     margin: 24px 0;
     color: #0D1B2A;
 }
