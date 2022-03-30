@@ -57,7 +57,7 @@ p {
 }
 
 .drumName {
-    padding: 12px 0px;
+    padding: 12px 4px;
 }
 
 @media all and (max-width: 1200px) {
@@ -77,6 +77,10 @@ p {
 }
 
 @media all and (max-width: 768px) {
+    p {
+        font-size: 12px;
+    }
+
     #drumkit {
         width: 50%;
     }
