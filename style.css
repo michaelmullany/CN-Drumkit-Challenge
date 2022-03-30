@@ -38,6 +38,7 @@ p {
     width: 70%;
     margin: 0 auto;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
@@ -45,7 +46,6 @@ p {
     border: #0D1B2A;
     background-color: #415A77;
     width: 10%;
-    min-width: 60px;
     margin-bottom: 12px;
     border-radius: 10%;
     overflow: hidden;
@@ -58,4 +58,32 @@ p {
 
 .drumName {
     padding: 12px 0px;
+}
+
+@media all and (max-width: 1200px) {
+    #drumkit {
+        width: 30%;
+    }
+
+    .drum {
+        width: 30%;
+    }
+}
+
+@media all and (max-width: 1024px) {
+    #drumkit {
+        width: 40%;
+    }
+}
+
+@media all and (max-width: 768px) {
+    #drumkit {
+        width: 50%;
+    }
+}
+
+@media all and (max-width: 480px) {
+    #drumkit {
+        width: 60%;
+    }
 }
